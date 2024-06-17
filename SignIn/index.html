@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 style="text-align: center;">Вхід</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group remember-me">
+                <label for="rememberMe">Запам'ятайте мене</label>
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="submit-button" onclick="SignIn(event)">Увійти</button>
+                <button type="button" class="cancel-button" onclick="Cancel()">Скасувати</button>
+            </div>
+            <label id="error" class="error"></label>
+        </form>
+        <p><a class="sign-up" href="/Users/adm/Desktop/Exam/JS/SignUp/index.html">Зареєструйтеся</a>, якщо не маєте акаунта</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
