@@ -135,9 +135,14 @@ function showDetailedWeather(index) {
         row.appendChild(paramCell);
 
         for (let j = 0; j < hours.length; j++) {
-            const hour = hours[j];
             const valueCell = document.createElement('td');
-            valueCell.textContent = getWeatherDetail(day.hour, hour, keys[i]);
+            if(j==0||j==1){
+                valueCell.textContent = getWeatherDetail(day.hour, `0${hours[j]}:00`, keys[i]);
+                
+            }
+            else{
+                valueCell.textContent = getWeatherDetail(day.hour, `${hours[j]}:00`, keys[i]);
+            }
             row.appendChild(valueCell);
         }
 
@@ -152,8 +157,11 @@ function showDetailedWeather(index) {
 }
 
 function getWeatherDetail(hours, hour, parameter) {
-    const weatherDetail = hours.find(h => h.time.includes(` ${hour}:00`));
-    return weatherDetail ? weatherDetail[parameter] : 'N/A';
+    for(let i=0; i<hours.length; i++) {
+        if(hours[i].time.split(" ")[1]===hour) {
+            return hours[i][parameter];
+        }
+    }
 }
 
 
