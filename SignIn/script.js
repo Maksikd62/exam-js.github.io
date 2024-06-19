@@ -24,7 +24,7 @@ function SignIn(event) {
             } 
         }
         localStorage.setItem('isSuccess', 'true');
-        window.location.href = '/Users/adm/Desktop/Exam/JS/News/index.html';
+        window.location.href = '/News/';
     } 
     else {
         errorLabel.textContent = 'Невірний email або пароль';
@@ -33,7 +33,7 @@ function SignIn(event) {
 
 function Cancel(){
     localStorage.setItem('isSuccess', 'false');
-    window.location.href = '/Users/adm/Desktop/Exam/JS/News/index.html';
+    window.location.href = '/News/';
 }
 
 function validateEmail(email) {

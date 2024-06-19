@@ -39,8 +39,8 @@ function SignUp(event) {
     else {
         localStorage.setItem('rememberMe', 'false');
     }
-    localStorage.getItem('isSuccess', 'true');
-    window.location.href = '/Users/adm/Desktop/Exam/JS/News/index.html';
+    localStorage.setItem('isSuccess', 'true');
+    window.location.href = '/News/';
 }
 
 function validateEmail(email) {

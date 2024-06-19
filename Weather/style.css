@@ -1,4 +1,74 @@
 .bg-body-tertiary{
     background-color: #b3ffb3 !important;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.weather-container {
+    flex: 1;
+}
+
+.weather-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.weather-day {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.weather-day:hover {
+    background-color: #e0f7fa;
+}
+
+.weather-day img {
+    margin-right: 10px;
+}
+
+.detailed-weather {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }

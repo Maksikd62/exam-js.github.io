@@ -12,6 +12,6 @@ function SignIn(){
         localStorage.setItem('isSuccess', 'false');
     }
     else{
-        window.location.href = '/Users/adm/Desktop/Exam/JS/SignIn/index.html';
+        window.location.href = '/SignIn/';
     }
 }

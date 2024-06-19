@@ -1,4 +1,89 @@
-.bg-body-tertiary{
+.bg-body-tertiary {
     background-color: #b3ffb3 !important;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+form input, form button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.news-container {
+    flex: 1;
+}
+
+.news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.pagination button {
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    background-color: #198754;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #127849;
+}
+
+.pagination button[disabled] {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    --bs-btn-bg: #198754;
+    --bs-btn-border-color: #198754;
+    --bs-btn-hover-bg: #127849;
+    --bs-btn-hover-border-color: #127849;
 }
