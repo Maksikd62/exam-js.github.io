@@ -40,6 +40,9 @@ function SignUp(event) {
         localStorage.setItem('rememberMe', 'false');
     }
     localStorage.setItem('isSuccess', 'true');
+    removeLocalStorage('weatherCity');
+    removeLocalStorage('newsCategory');
+    removeLocalStorage('galleryCategory');
     window.location.href = '/News/';
 }
 
@@ -51,4 +54,8 @@ function validateEmail(email) {
 function validateName(name) {
     const checkName = /^[A-Za-zА-Яа-яІіЇїЄє]+$/;
     return checkName.test(name);
+}
+
+const removeLocalStorage = (key) => {
+    localStorage.removeItem(key);
 }

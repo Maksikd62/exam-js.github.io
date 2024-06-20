@@ -10,23 +10,21 @@ body {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 form {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 form input, form button {
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }

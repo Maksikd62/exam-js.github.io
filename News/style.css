@@ -10,23 +10,21 @@ body {
 .container {
     width: 80%;
     margin: auto;
-    overflow: hidden;
 }
 
 h1 {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 form {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
 form input, form button {
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -50,7 +48,9 @@ form button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
 
 .card {
@@ -66,18 +66,19 @@ form button {
 .pagination button {
     padding: 10px;
     margin: 0 5px;
-    border: 1px solid #ccc;
-    background-color: #198754;
-    color: white;
+    color: #198754;
+    border: 1px solid #198754;
     cursor: pointer;
 }
 
 .pagination button:hover {
-    background-color: #127849;
+    background-color: #198754;
+    color: white;
 }
 
 .pagination button[disabled] {
     background-color: #6c757d;
+    color: white;
     cursor: not-allowed;
 }
 

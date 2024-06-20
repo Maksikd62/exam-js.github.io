@@ -4,7 +4,7 @@ const apiLang = "uk";
 
 document.addEventListener('DOMContentLoaded', () => {
     const isSuccess = localStorage.getItem('isSuccess');
-    const storedCity = localStorage.getItem('city');
+    const storedCity = localStorage.getItem('weatherCity');
 
     if (isSuccess==='true'){
         const buttonSign=document.getElementById('buttonSign');
@@ -31,21 +31,25 @@ function SignIn(){
 
 function ShowWeather(e) {
     e.preventDefault();
-    const city = document.getElementById("newCity").value;
     const detailedWeather = document.getElementById('detailedWeather');
     detailedWeather.innerHTML='';
-    fetchWeather(city);
+    fetchWeather();
 }
 
-async function fetchWeather(city) {
+async function fetchWeather() {
+    const city = document.getElementById("newCity").value;
+    const isSuccess = localStorage.getItem('isSuccess');
     const weatherApiUrl = `https://api.weatherapi.com/v1/forecast.json?q=${city}&days=${apiDays}&lang=${apiLang}&key=${apiKey}`;
     try {
         const response = await fetch(weatherApiUrl);
         const data = await response.json();
         if (data && data.forecast && data.forecast.forecastday) {
             displayWeather(data.forecast.forecastday);
-            localStorage.setItem('city', city);
-        } else {
+            if (isSuccess === 'true'){
+                localStorage.setItem('weatherCity', city);
+            }
+        } 
+        else {
             document.getElementById('weatherList').innerHTML = `<p>Weather not found</p>`;
         }
     } catch (error) {

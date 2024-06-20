@@ -1,4 +1,86 @@
-.bg-body-tertiary{
+.bg-body-tertiary {
     background-color: #b3ffb3 !important;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form select, form button {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.photos-list{
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.img{
+    margin:5px;
+    width: auto;
+}
+
+.pagination{
+    margin:10px;
+}
+.pagination .page-item .page-link {
+    color: #198754;
+    border: 1px solid #198754;
+    margin: 0 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.pagination .page-item:hover .page-link {
+    background-color: #198754;
+    color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    cursor: not-allowed;
+}
+
+.pagination .page-item.disabled:hover .page-link {
+    background-color: #6c757d;
+    color: white;
+}
+
+.pagination .page-item.active .page-link {
+    color: #6c757d;
+    border: 3px solid #6c757d;
+    background-color: white;
+    cursor: not-allowed;
+}
+
+.pagination .page-item.active:hover .page-link {
+    background-color: #6c757d;
+    color: white;
 }

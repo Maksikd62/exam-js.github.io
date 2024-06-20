@@ -28,7 +28,46 @@
                 </form>
             </div>
         </div>
-      </nav>
+    </nav>
+    <div class="container">
+        <h1>Пошук фото</h1>
+        <form id="searchForm">
+            <div class="form-row">
+                <select id="photoType">
+                    <option value="Nature">Природа</option>
+                    <option value="Animals">Тварини</option>
+                    <option value="Architecture">Архітектура</option>
+                    <option value="Food">Їжа</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <button onclick="searchPhotos(event)">Шукати</button>
+            </div>
+        </form>
+        <div class="content">
+            <div class="photos-container">
+                <div id="gallery" class="photos-list"></div>
+            </div>
+        </div> 
+        <nav aria-label="...">
+            <ul id="pagination" class="pagination"></ul>
+        </nav>
+        <!-- <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active" aria-current="page">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+        </nav> -->
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

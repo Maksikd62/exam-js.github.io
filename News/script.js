@@ -1,6 +1,7 @@
 const apiKey = "a7d7854113ef42709d93344b25d70030";
+const pageSize = 10;
 document.addEventListener('DOMContentLoaded', function() {
-    const storedCategory = localStorage.getItem('category');
+    const storedCategory = localStorage.getItem('newsCategory');
     const isSuccess = localStorage.getItem('isSuccess');
 
     if (isSuccess === 'true'){
@@ -31,7 +32,7 @@ function searchNews(e) {
 
 async function fetchNews(page) {
     const category = document.getElementById("newCategory").value;
-    const pageSize = 10;
+    const isSuccess = localStorage.getItem('isSuccess');
     const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=${pageSize}&page=${page}&apiKey=${apiKey}`;
 
     try {
@@ -41,7 +42,9 @@ async function fetchNews(page) {
         if (data.status === "ok") {
             displayNews(data.articles);
             setupPagination(data.totalResults, page, pageSize);
-            localStorage.setItem('category', category);
+            if (isSuccess === 'true'){
+                localStorage.setItem('newsCategory', category);
+            }
         } else {
             document.getElementById('newsList').innerHTML = `<p>News not found</p>`;
             document.getElementById('pagination').innerHTML = '';
